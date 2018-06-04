@@ -565,6 +565,15 @@ angular.module('myApp.controllers', ['myApp.i18n'])
       })
     }
 
+      $scope.openWallet = function () {
+          $modal.open({
+              templateUrl: templateUrl('light_wallet'),
+              controller: 'SettingsModalController',
+              windowClass: 'settings_modal_window mobile_modal',
+              backdrop: 'single'
+          })
+      }
+
     $scope.openGroup = function () {
       ContactsSelectService.selectContacts({action: 'new_group'}).then(function (userIDs) {
         if (userIDs && 

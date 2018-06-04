@@ -43,6 +43,7 @@
   "homepage": "http://zhukov.github.io/webogram",
   "devDependencies": {
     "del": "^1.2.0",
+    "eth-lightwallet": "^3.0.1",
     "event-stream": "^3.1.0",
     "gulp": "^3.9.0",
     "gulp-angular-templatecache": "^1.1.0",
@@ -61,7 +62,7 @@
     "gulp-rev": "^1.1.0",
     "gulp-standard": "^7.0.1",
     "gulp-uglify": "^1.0.2",
-    "gulp-usemin": "=0.3.11",
+    "gulp-usemin": "^0.3.29",
     "gulp-util": "^3.0.7",
     "gulp-zip": "^0.1.2",
     "http": "0.0.0",
@@ -81,5 +82,8 @@
       "$",
       "chrome"
     ]
+  },
+  "dependencies": {
+    "hooked-web3-provider": "^1.0.0"
   }
 }

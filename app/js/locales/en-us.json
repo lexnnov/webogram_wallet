@@ -455,7 +455,9 @@
 	"head_new_contact": "New contact",
 	"head_contacts": "Contacts",
 	"head_contacts_title": "Contacts",
+
 	"head_telegram_faq": "Telegram FAQ",
+	"head_telegram_light_wallet": "Light Wallet",
 	"head_settings": "Settings",
 	"head_log_out": "Log out",
 	"head_peer_more": "More",
