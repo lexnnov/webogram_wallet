@@ -28,7 +28,7 @@
 
             document.getElementById('sendFrom').innerHTML = ''
             document.getElementById('functionCaller').innerHTML = ''
-            for (var i = 0; i < addresses.length; ++i) {
+            for (var i = 0; i < 1; ++i) {
                 document.getElementById('sendFrom').innerHTML += '<option value="' + addresses[i] + '">' + addresses[i] + '</option>'
                 document.getElementById('functionCaller').innerHTML += '<option value="' + addresses[i] + '">' + addresses[i] + '</option>'
             }
@@ -180,8 +180,8 @@
 
 
         <div style="">
-        <h2>Show Addresses</h2>
-        <div>Show <input class="form-control" type="text" id="numAddr" size="5" value="3"></input> more address(es)
+        <h4>Show Address</h4>
+        <div style="display: none">Show <input class="form-control" type="text" id="numAddr" size="5" value="1"></input> more address(es)
             <button class="btn btn-md" onclick="newAddresses('')">Show</button>
         </div>
         <div id="addr"></div>
