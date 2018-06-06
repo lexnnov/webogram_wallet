@@ -113,8 +113,9 @@
         var fromAddr = document.getElementById('sendFrom').value
         var toAddr = document.getElementById('sendTo').value
         var valueEth = document.getElementById('sendValueAmount').value
+        var valueGasPrice = document.getElementById('valueGasPrice').value
         var value = parseFloat(valueEth) * 1.0e18
-        var gasPrice = 18000000000
+        var gasPrice = valueGasPrice
         var gas = 50000
         web3.eth.sendTransaction({
             from: fromAddr,
@@ -173,14 +174,14 @@
         <div><input class="form-control" type="text" id="userEntropy" placeholder="Type random text to generate entropy" size="70"></input>
             <button class="btn btn-md" onclick="newWallet()">Create New Wallet</button>
         </div>
-        <h4 style="margin-top: 30px;">Restore Wallet</h4>
+        <h4 style="margin-top: 20px;">Restore Wallet</h4>
         <div><input class="form-control" type="text" id="seed" value="" size="70"></input>
             <button class="btn btn-md" onclick="setSeed()">Restore wallet from Seed</button>
         </div>
 
 
-        <div style="">
-        <h4>Show Address</h4>
+
+        <h4 style="margin-top: 20px;">Show Address</h4>
         <div style="display: none">Show <input class="form-control" type="text" id="numAddr" size="5" value="1"></input> more address(es)
             <button class="btn btn-md" onclick="newAddresses('')">Show</button>
         </div>
@@ -188,18 +189,24 @@
         <div>
             <button class="btn btn-md" onClick='getBalances()'>Refresh</button>
         </div>
-        </div>
 
 
 
-        <h4 style="margin-top: 30px;">Send Ether</h4>
+
+        <h4 style="margin-top: 20px;">Send Ether</h4>
         <div>From: <select class="form-control" id="sendFrom"></select></div>
         <div>To: <input class="form-control" type="text" size="40" id="sendTo"></input></div>
         <div>Ether: <input class="form-control" type="text" id="sendValueAmount"></div>
+        Gas Price:
+        <div class="col-md-12">
+            <div class="col-md-11"><input class="form-control col-md-6" type="text" id="valueGasPrice" value="18000000000"></div>
+            <h4 class="col-md-1 text-right" style="display: inline-block">wei</h4>
+        </div>
+
         <div>
             <button class="btn btn-md" onclick="sendEth()">Send Ether</button>
         </div>
-        <h4 style="margin-top: 30px;">Show Seed</h4>
+        <h4 style="margin-top: 20px;">Show Seed</h4>
         <button class="btn btn-md" onclick="showSeed()">Show Seed</button>
 
 
